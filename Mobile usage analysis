@@ -1,0 +1,64 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_excel("/content/drive/MyDrive/Data.csv")
+
+df["Date"] = pd.to_datetime(df["Date"])
+
+
+plt.figure(figsize=(10,5))
+plt.plot(df["Date"], df["Screen Time Hours"], marker='o')
+plt.title("Daily Screen Time")
+plt.xlabel("Date")
+plt.ylabel("Screen Time (Hours)")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+
+plt.figure(figsize=(10,5))
+sns.barplot(x="Date", y="Data Consumption MB", data=df)
+plt.title("Daily Data Consumption")
+plt.xlabel("Date")
+plt.ylabel("Data Used (MB)")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+
+plt.figure(figsize=(6,6))
+plt.hist(df["App Usage Hours"], bins=8)
+plt.title("Distribution of App Usage Hours")
+plt.xlabel("App Usage (Hours)")
+plt.ylabel("Frequency")
+plt.show()
+
+
+total_screen = df["Screen Time Hours"].sum()
+total_app = df["App Usage Hours"].sum()
+
+plt.figure(figsize=(6,6))
+plt.pie([total_screen, total_app],
+        labels=["Screen Time", "App Usage"],
+        autopct="%1.1f%%")
+plt.title("Screen Time vs App Usage")
+plt.show()
+
+
+plt.figure(figsize=(8,5))
+plt.scatter(df["Screen Time Hours"], df["Data Consumption MB"])
+plt.title("Screen Time vs Data Usage")
+plt.xlabel("Screen Time (Hours)")
+plt.ylabel("Data Consumption (MB)")
+plt.show()
+
+
+plt.figure(figsize=(10,5))
+sns.lineplot(x="Date", y="App Usage Hours", data=df, marker="o")
+plt.title("Daily App Usage Trend")
+plt.xlabel("Date")
+plt.ylabel("App Usage (Hours)")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
