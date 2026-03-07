@@ -1,0 +1,11 @@
+User_ID,Date,Day,Screen Time Hours,App Usage Hours,Data Consumption MB,Calls Minutes,Messages Count,Battery Usage Percent
+U1001,2/1/2026,Sunday,4.5,3.3,1695,61,166,33
+U1002,2/2/2026,Monday,4.7,3.1,2825,51,106,58
+U1003,2/3/2026,Tuesday,7.1,4.5,2482,118,81,61
+U1004,2/4/2026,Wednesday,7.6,1.5,2331,13,122,78
+U1005,2/5/2026,Thursday,6.8,3,2592,116,160,56
+U1006,2/6/2026,Friday,6.4,4.3,2332,46,116,48
+U1007,2/7/2026,Saturday,2,4.4,1120,10,162,58
+U1008,2/8/2026,Sunday,6.8,2.6,1590,28,88,80
+U1009,2/9/2026,Monday,2.7,2.7,2043,40,31,60
+U1010,2/10/2026,Tuesday,6,4.2,783,63,95,46
